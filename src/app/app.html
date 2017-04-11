@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <h1>Hello {{name}}</h1>
+    <p (click) = "clickh1()">Bonjour {{prenom}}</p>
+    <p> Tu es {{personne.name}} et tu as {{personne.age}}</p>
+    <label (click) = enter>{{personne.name}}</label>
+    <input #firstNameInput (keyup.enter) = "changeName(firstNameInput.value)" (keyup.escape) = "reset(firstNameInput)" type="text" id="name" [value]="personne.name">
+    <ul>
+      <list *ngFor="let personn of personns" [personn]="personn"></list>
+    </ul>
+
+  </body>
+</html>

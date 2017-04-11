@@ -1,0 +1,19 @@
+<<<<<<< HEAD
+{
+  "server": {
+    "baseDir": "src",
+    "routes": {
+      "/node_modules": "node_modules"
+    }
+  }
+}
+=======
+{
+  "server": {
+    "baseDir": "src",
+    "routes": {
+      "/node_modules": "node_modules"
+    }
+  }
+}
+>>>>>>> fc1432946c4ed0805365a1cef06529cabaa9c980

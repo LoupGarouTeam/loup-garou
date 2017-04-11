@@ -1,0 +1,31 @@
+<<<<<<< HEAD
+{
+  "open": false,
+  "logLevel": "silent",
+  "port": 8080,
+  "server": {
+    "baseDir": "src",
+    "routes": {
+      "/node_modules": "node_modules"
+    },
+    "middleware": {
+      "0": null
+    }
+  }
+}
+=======
+{
+  "open": false,
+  "logLevel": "silent",
+  "port": 8080,
+  "server": {
+    "baseDir": "src",
+    "routes": {
+      "/node_modules": "node_modules"
+    },
+    "middleware": {
+      "0": null
+    }
+  }
+}
+>>>>>>> fc1432946c4ed0805365a1cef06529cabaa9c980

@@ -1,0 +1,17 @@
+<<<<<<< HEAD
+{
+  "/api/*": {
+    "target": "http://localhost:3005",
+    "secure": false,
+    "logLevel": "debug"
+  }
+}
+=======
+{
+  "/api/*": {
+    "target": "http://localhost:3005",
+    "secure": false,
+    "logLevel": "debug"
+  }
+}
+>>>>>>> fc1432946c4ed0805365a1cef06529cabaa9c980
