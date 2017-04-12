@@ -3,6 +3,8 @@ var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
+var players[];
+
 app.use(express.static(__dirname));
 
 
@@ -15,6 +17,15 @@ io.on('connection', (socket) => {
 
   socket.on('add-message', (message) => {
     io.emit('message', {type:'new-message', text: message});
+  });
+
+  socket.on('add-player', (playerName) => {
+    players.push({"name" : playerName, "role" = "undefined", ""});
+    socket.emit('players',players);
+  });
+
+  socket.on('get-players', () => {
+    socket.emit('players',players);
   });
 });
 
