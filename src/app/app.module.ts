@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -17,6 +18,7 @@ const appRoutes: Routes = [
   { path: 'board', component: BoardComponent },
   { path: 'timer', component: TimerComponent },
   { path: '',   redirectTo: '/login', pathMatch: 'full' }
+
 ];
 
 
@@ -37,5 +39,7 @@ const appRoutes: Routes = [
   ],
   providers: [],
   bootstrap: [AppComponent]
+
 })
-export class AppModule { }
+export class AppModule {
+}
