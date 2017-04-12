@@ -2,6 +2,8 @@ var express = require('express');
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
+var PORT = process.env.PORT || 3005;
+
 
 app.use(express.static(__dirname));
 let Players = []
@@ -21,6 +23,6 @@ io.on('connection', (socket) => {
   });
 });
 
-http.listen(3005, function() {
-  console.log('Serveur sur port 3005')
+http.listen(PORT, function() {
+  console.log('Serveur sur port 3005');
 })

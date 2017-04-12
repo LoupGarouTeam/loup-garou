@@ -11,6 +11,7 @@ import { AuthComponent } from './auth/auth.component';
 const appRoutes: Routes = [
   { path: 'login', component: AuthComponent },
   { path: 'test', component: TchatComponent },
+  { path: 'timer', component: TimerComponent },
   { path: '',   redirectTo: '/login', pathMatch: 'full' }
 ];
 
