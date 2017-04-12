@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { RoleComponent } from './role/role.component';
 import { TimerComponent } from './timer/timer.component';
 import { TchatComponent } from './tchat/tchat.component';
+import { LobbyComponent } from './lobby/lobby.component';
 import { AuthComponent } from './auth/auth.component';
 
 const appRoutes: Routes = [
@@ -25,6 +26,7 @@ const appRoutes: Routes = [
     TimerComponent,
     TchatComponent,
     AuthComponent,
+    LobbyComponent
   ],
   imports: [
     BrowserModule,

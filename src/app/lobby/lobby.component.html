@@ -1,0 +1,12 @@
+<table>
+  <thead>
+  <th>Joueur</th>
+  <th>Prêt</th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let player of players">
+    <td>{{player.name}}</td>
+    <td><input type="checkbox" [(ngModel)]="player.ready" (change)="playerReady()"/></td>
+  </tr>
+  </tbody>
+</table>
