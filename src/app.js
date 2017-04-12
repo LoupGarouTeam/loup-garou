@@ -6,13 +6,16 @@ var io = require('socket.io')(http);
 var players[];
 
 app.use(express.static(__dirname));
-
+let Players = []
 
 io.on('connection', (socket) => {
   console.log('user connected');
 
   socket.on('disconnect', function(){
     console.log('user disconnected');
+  });
+  socket.on('addPlayer', function(name){
+    Players.push(name);
   });
 
   socket.on('add-message', (message) => {
