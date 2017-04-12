@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BoardService } from '../board.service';
 
 @Component({
   selector: 'app-timer',
@@ -7,31 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TimerComponent implements OnInit {
 
-	public varTimer = 60;
+	public varTimer :any;
+  public connection :any;
 
-  constructor() { }
+  constructor(private _boardService: BoardService) { }
 
   ngOnInit() {
+    // setTimeout(function(){
+    //    this.varTimer = this._boardService.getTimer(this.varTimer);
+    // }.bind(this),1000);
+
+    this._boardService.initTimer();
+
+    this.connection = this._boardService.getTimer().subscribe(timer => {
+      console.log(timer);
+      this.varTimer = timer;
+    });
+        			
 
 
-			this.initTimer();
-
-
-  }
-
-  initTimer(){
-  	console.log(this.varTimer);
-  	setTimeout(function(){
-		if(this.varTimer > 0){
-
-			this.varTimer -= 1;
-
-			this.initTimer();
-		
-
-
-		}
-	}.bind(this),1000);
   }
 
 }
