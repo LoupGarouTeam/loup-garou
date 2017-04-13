@@ -67,12 +67,11 @@ export class RoleService {
 
     players = this.shuffle(players);
 
-    for (var i = 0; i<players.length; i++)
-    {
-      console.log(players[i]);
-    }
+    return players;
 
   }
+
+
 
   //Shuffle prends en paramètre un tableau et mélange l'ordre des éléments du
   //tableau de manière aléatoire
