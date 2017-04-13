@@ -1,6 +1,8 @@
 // COMPONENTS
 import { Component, OnInit } from '@angular/core';
 import { TimerComponent } from '../timer/timer.component';
+import { ListeJoueursComponent } from '../liste-joueurs/liste-joueurs.component';
+import { TchatJoueursComponent } from '../tchat-joueurs/tchat-joueurs.component';
 
 
 // SERVICES

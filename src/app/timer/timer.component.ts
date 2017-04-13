@@ -21,7 +21,6 @@ export class TimerComponent implements OnInit {
     this._boardService.initTimer();
 
     this.connection = this._boardService.getTimer().subscribe(timer => {
-      console.log(timer);
       this.varTimer = timer;
     });
         			

@@ -8,7 +8,6 @@ body{
 /*conteneur global du jeu*/
 .wrapperGame{
 	width:100%;
-	height:100vh;
 	/*background-image:url(image/img20G.jpg);*/
 	background-image:url(image/fond1.jpg);
 	background-position:center;
@@ -185,106 +184,8 @@ body{
 
 
 
-	.wrapperGame-interfaceListeJoueursPseudos{
-		position:fixed;
-		top:50px;
-		left:50px;
-		width:250px;
-		height:calc(100vh - 100px);
-		background-color: rgba(0,0,0,0.7);
-		overflow-y:auto;
-	}
-		.wrapperGame-interfaceListeJoueursPseudos-section{
-			width:100%;
-			background-color:rgba(0,0,0,0.5);
-			padding:10px 0;
-		}
-			.wrapperGame-interfaceListeJoueursPseudos-section-pseudo{
-				width:100px;
-				height:100%;
-				background-color:green;
-			}
-	.wrapperGame-interfaceTchat{
-		width:calc(100% - 600px);
-		height:calc(100vh - 100px);
-		margin:0 auto 0 auto;
-		padding-top:50px;
-	}
-		.wrapperGame-interfaceTchat-tchat{
-			width:calc(100% - 40px);
-			height:calc(100% - 100px);
-			background-color:rgba(0,0,0,0.7);
-			padding:0 20px;
-			overflow-y:auto;
-			
-		}
-			.wrapperGame-interfaceTchat-tchat-push{
-				display:block;
-				width:100%;
-				height:100%;
-			}
-			.wrapperGame-interfaceTchat-tchat-section{
-				display:block;
-				width:calc(100% - 6px);
-				min-height:0;
-				padding:3px;
-
-				/*border-top:1px rgba(255,255,255,0.1) solid;
-				border-right:1px rgba(0,0,0,0.1) solid;
-				border-bottom:1px rgba(0,0,0,0.2) solid;
-				border-left:1px rgba(0,0,0,0.1) solid;
-				background-color:#6f402e;*/
-			}
-				.wrapperGame-interfaceTchat-tchat-section-heure{
-					font-family: 'Arial',sans serif;
-					color:#63dc13;
-				}
-				.wrapperGame-interfaceTchat-tchat-section-pseudo{
-					font-family: 'Arial',sans serif;
-					color:rgba(255,255,255,0.9);
-					font-weight:bold;
-				}
-				.wrapperGame-interfaceTchat-tchat-section-message{
-					font-family: 'Arial',sans serif;
-					color:rgba(255,255,255,0.7);
-				}
-				.wrapperGame-interfaceTchat-tchat-section-inGame{
-					font-family: 'Arial',sans serif;
-					color:red;
-					font-style:italic;
-				}
-				.wrapperGame-interfaceTchat-tchat-section-myself{
-					font-family: 'Arial',sans serif;
-					color:#5487e5;
-					font-weight:bold;
-				}
-		.wrapperGame-interfaceTchat-form{
-			display:block;
-			width:calc(100% - 40px);
-			height:80px;
-			background-color:#7e4c35;
-			padding:20px 20px 0 20px;
-		}
-			.wrapperGame-interfaceTchat-form-input{
-				outline:none;
-				display:block;
-				width:calc(100% - 170px);
-				height:40px;
-				border:none;
-				float:left;
-				padding:0 20px 0 20px;
-				font-family: 'Arial',sans serif;
-				font-weight:bold;
-			}
-			.wrapperGame-interfaceTchat-form-submit{
-				cursor:pointer;
-				display:block;
-				width:120px;
-				height:40px;
-				border:none;
-				float:left;
-				margin-right:10px;
-			}
+	
+	
 	.wrapperGame-interfaceListeJoueursRoles{
 		position:fixed;
 		top:50px;
