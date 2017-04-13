@@ -4,6 +4,7 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var PORT = process.env.PORT || 3005;
 
+
 app.use(express.static(__dirname));
 
 var varTimer = 60;
@@ -23,6 +24,7 @@ io.on('connection', (socket) => {
     io.emit('message', {type:'new-message', text: message});
   });
 
+
   socket.on('init-pseudo', (newPseudo) => {
     pseudo.push(newPseudo);
   });
@@ -41,7 +43,7 @@ io.on('connection', (socket) => {
               console.log('fini!');
               varTimer = 60;
             }
-            
+
           }
           io.emit('updateTimer',varTimer);
         },1000);
