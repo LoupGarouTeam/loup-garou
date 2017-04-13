@@ -6,7 +6,7 @@
   <tbody>
   <tr *ngFor="let player of players">
     <td>{{player.name}}</td>
-    <td><input type="checkbox" [(ngModel)]="player.ready" (change)="playerReady()"/></td>
+    <td><input type="checkbox" [(ngModel)]="player.ready" onclick="return false;"/></td>
   </tr>
   </tbody>
 </table>
