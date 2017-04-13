@@ -5,10 +5,10 @@ var io = require('socket.io')(http);
 var PORT = process.env.PORT || 3005;
 
 
-var players = new Array();
-
 app.use(express.static(__dirname));
-let Players = []
+
+var varTimer = 60;
+var pseudo = [];
 
 io.on('connection', (socket) => {
   console.log('user connected');
@@ -24,16 +24,57 @@ io.on('connection', (socket) => {
     io.emit('message', {type:'new-message', text: message});
   });
 
-  socket.on('add-player', (playerName) => {
-    players.push({"name" : playerName, "role" : "undefined", "status" : 0});
-    socket.emit('players',players);
+
+  socket.on('init-pseudo', (newPseudo) => {
+    pseudo.push(newPseudo);
   });
 
-  socket.on('get-players', () => {
-    socket.emit('players',players);
-  });
+  socket.on('init-timer', () => {
+    console.log('initialisation du chronometre etc');
+
+    function loadTimer(){
+     setTimeout(function(){
+      if(varTimer > 0){
+        varTimer -= 1;
+        loadTimer();
+
+        if(varTimer == 0){
+              // messageJeu.innerText = 'Tour terminÃ©';
+              console.log('fini!');
+              varTimer = 60;
+            }
+
+          }
+          io.emit('updateTimer',varTimer);
+        },1000);
+   }
+   if (pseudo.length > 1) {
+      loadTimer();
+    }
+ });
+
 });
 
 http.listen(PORT, function() {
   console.log('Serveur sur port 3005');
 })
+
+
+
+
+// setInterval(function(){
+
+//         if(varTimer > 0){
+//           varTimer -= 1;
+
+//           if(varTimer == 0){
+//             // messageJeu.innerText = 'Tour terminÃ©';
+//             console.log('fini!');
+//             varTimer = 60;
+//           }
+
+//         }
+
+
+//         io.emit('updateTimer',varTimer);
+//     },1000);

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import * as io from 'socket.io-client';
 import { TchatComponent } from './tchat/tchat.component';
 import { PseudoService } from './pseudo.service';
+import { BoardComponent } from './board/board.component';
 
 @Component({
   selector: 'app-root',
