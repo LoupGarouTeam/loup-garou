@@ -1,7 +1,18 @@
-<div class='wrapperGame-interfaceListeJoueursPseudos'>
-    <div *ngFor="let user of listUser" class='wrapperGame-interfaceListeJoueursPseudos-section'>
-        {{ user }}
-        <input type="checkbox" onclick="return false;"/> <!-- [(ngModel)]="user.ready" onclick="playerReady()";// TODO : Gestion du ready -->
-    </div>
-    <button type="button" class="wrapperGame-interfaceListeJoueursPseudos-start" (click)="startGame()">Start</button>
+<div  class='wrapperGame-interfaceListeJoueursPseudos'>
+		<div *ngFor="let listUsers of listUser" class='wrapperGame-interfaceListeJoueursPseudos-section'>
+			<div class='wrapperGame-interfaceListeJoueursPseudos-section-pseudo'>
+				{{ listUsers }}
+				<input type="checkbox" onclick="return false;"/> <!-- [(ngModel)]="user.ready" onclick="playerReady()";// TODO : Gestion du ready -->
+			</div>
+		</div>
+
+
+		<!-- structure pour les joueurs tués -->
+
+		<div class='wrapperGame-interfaceListeJoueursPseudos-section--dead'>
+			<div class='wrapperGame-interfaceListeJoueursPseudos-section-etat'></div>
+			<div class='wrapperGame-interfaceListeJoueursPseudos-section-pseudo--dead'>Lucas</div>
+		</div>
+		<button type="button" class="wrapperGame-interfaceListeJoueursPseudos-start" (click)="startGame()">Start</button>
+
 </div>
