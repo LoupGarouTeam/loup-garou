@@ -14,12 +14,11 @@ export class PseudoService {
 
   getPseudo(){
     let pseudo = localStorage.getItem('pseudo')
-
     return pseudo;
   }
 
-  addPseudo(newPseudo){
-    localStorage.setItem('pseudo', newPseudo);
+  addPseudo(newPseudo :string){
+    localStorage.setItem('user', newPseudo);
     this.socket.emit('init-pseudo', newPseudo);
   }
 
