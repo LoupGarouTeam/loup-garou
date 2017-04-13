@@ -1,0 +1,80 @@
+.wrapperGame-interfaceTchat{
+		width:calc(100% - 500px);
+		height:calc(100vh - 90px);
+		margin:0 auto 0 auto;
+		padding-top:40px;
+	}
+		.wrapperGame-interfaceTchat-tchat{
+			width:calc(100% - 40px);
+			height:calc(100% - 100px);
+			background-color:rgba(0,0,0,0.7);
+			padding:0 20px;
+			overflow-y:auto;
+		}
+			.wrapperGame-interfaceTchat-tchat-push{
+				display:block;
+				width:100%;
+				height:140px;
+			}
+			.wrapperGame-interfaceTchat-tchat-section{
+				display:block;
+				width:calc(100% - 6px);
+				min-height:0;
+				padding:3px;
+
+				/*border-top:2px rgba(255,255,255,0.1) solid;
+				border-right:1px rgba(0,0,0,0.1) solid;
+				border-bottom:2px rgba(0,0,0,0.2) solid;
+				border-left:1px rgba(0,0,0,0.1) solid;
+				background-color:#472116;*/
+			}
+				.wrapperGame-interfaceTchat-tchat-section-heure{
+					font-family: 'Arial',sans serif;
+					color:#63dc13;
+				}
+				.wrapperGame-interfaceTchat-tchat-section-pseudo{
+					font-family: 'Arial',sans serif;
+					color:rgba(255,255,255,0.9);
+					font-weight:bold;
+				}
+				.wrapperGame-interfaceTchat-tchat-section-message{
+					font-family: 'Arial',sans serif;
+					color:rgba(255,255,255,0.7);
+				}
+				.wrapperGame-interfaceTchat-tchat-section-inGame{
+					font-family: 'Arial',sans serif;
+					color:red;
+					font-style:italic;
+				}
+				.wrapperGame-interfaceTchat-tchat-section-myself{
+					font-family: 'Arial',sans serif;
+					color:#5487e5;
+					font-weight:bold;
+				}
+		.wrapperGame-interfaceTchat-form{
+			display:block;
+			width:calc(100% - 40px);
+			height:80px;
+			background-color:#7e4c35;
+			padding:20px 20px 0 20px;
+		}
+			.wrapperGame-interfaceTchat-form-input{
+				outline:none;
+				display:block;
+				width:calc(100% - 170px);
+				height:40px;
+				border:none;
+				float:left;
+				padding:0 20px 0 20px;
+				font-family: 'Arial',sans serif;
+				font-weight:bold;
+			}
+			.wrapperGame-interfaceTchat-form-submit{
+				cursor:pointer;
+				display:block;
+				width:120px;
+				height:40px;
+				border:none;
+				float:left;
+				margin-right:10px;
+			}

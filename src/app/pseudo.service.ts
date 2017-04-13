@@ -20,6 +20,7 @@ export class PseudoService {
 
   addPseudo(newPseudo :string){
     localStorage.setItem('user', newPseudo);
+    this.socket.emit('init-pseudo', newPseudo);
   }
 
   /*setReady(ready){

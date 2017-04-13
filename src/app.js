@@ -13,9 +13,6 @@ var pseudo = [];
 io.on('connection', (socket) => {
   console.log('user connected');
 
-  socket.on('disconnect', function(){
-    console.log('user disconnected');
-  });
   socket.on('addPlayer', function(name){
     Players.push(name);
   });
@@ -24,11 +21,19 @@ io.on('connection', (socket) => {
     io.emit('message', {type:'new-message', text: message});
   });
 
-
-  socket.on('init-pseudo', (newPseudo) => {
-    pseudo.push(newPseudo);
+  /* Liste des utilisateurs */
+  socket.on('list-user', () => {
+    console.log(pseudo)
+      io.emit('listUser', pseudo)
   });
 
+  /* Initialisation des user */
+  socket.on('init-pseudo', (newPseudo) => {
+    pseudo.push(newPseudo);
+    console.log(pseudo);
+  });
+
+  /* Timer des partis */
   socket.on('init-timer', () => {
     console.log('initialisation du chronometre etc');
 
@@ -58,23 +63,3 @@ io.on('connection', (socket) => {
 http.listen(PORT, function() {
   console.log('Serveur sur port 3005');
 })
-
-
-
-
-// setInterval(function(){
-
-//         if(varTimer > 0){
-//           varTimer -= 1;
-
-//           if(varTimer == 0){
-//             // messageJeu.innerText = 'Tour terminÃ©';
-//             console.log('fini!');
-//             varTimer = 60;
-//           }
-
-//         }
-
-
-//         io.emit('updateTimer',varTimer);
-//     },1000);
