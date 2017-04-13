@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i');
+.wrapperGame-interfaceListeJoueursPseudos{
+		position:fixed;
+		top:50px;
+		left:50px;
+		width:250px;
+		height:calc(100vh - 160px);
+		padding-top:60px;
+		background-color: rgba(0,0,0,0.7);
+		overflow-y:auto;
+	}
+			.wrapperGame-interfaceListeJoueursPseudos-section{
+				width:calc(100% - 48px);
+				min-height:0;
+				border:4px #e2c88e solid;
+				border-radius:3px;
+				box-shadow: 0 0 8px rgba(0,0,0,0.7), 0 0 15px #A3805A inset;
+				margin:5px 0 5px 10px;
+				background-color:#DABE93;
+				padding:10px;
+				font-family: 'Lora', 'Arial',serif;
+				font-weight:700;
+			}
