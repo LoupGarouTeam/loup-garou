@@ -26,16 +26,13 @@ export class AuthComponent implements OnInit {
     }
 
     submitPseudo() {
-        
-        console.log(this.user);
-                
         this._pseudoService.addPseudo(this.user);
+        this.router.navigateByUrl('board');
     }
 
     onSubmit() {
 
         this.user = this.userForm.value.user;
-        console.log(this.user)
         if (this.user.length >= 4) {
             this.noUser = true;
         } else {
