@@ -26,18 +26,16 @@ export class AuthComponent implements OnInit {
 
     submitPseudo() {
         this._pseudoService.addPseudo(this.pseudo);
+        this.buildForm();
     }
 
     onSubmit() {
-        this.buildForm();
         this.pseudo = this.pseudoForm.value.pseudo;
-
-        if (this.pseudo.length > 4) {
+        if (this.pseudo.length >= 4) {
             this.noPseudo = true;
         } else {
             this.noPseudo = false;
         }
-        console.log(this.pseudo);
         this.submitPseudo();
     }
 
