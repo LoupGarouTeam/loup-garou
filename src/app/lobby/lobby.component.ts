@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {PseudoService} from '../pseudo.service';
 
 @Component({
     selector: 'app-lobby',
@@ -6,28 +7,22 @@ import {Component} from '@angular/core';
     styleUrls: ['./lobby.component.css']
 })
 export class LobbyComponent {
-    players = [];
+    pseudo = this._pseudoService;
+    players = []; // TODO regroupe tout les players en un tableau
     everyoneReady = true;
 
-    constructor() {
+    constructor(private _pseudoService: PseudoService) {
         this.getPlayers();
     }
 
     // TODO : Récupérer les vrais joueurs avec socket io
     getPlayers() {
-        for (var i = 1; i < 11; i++) {
-            this.players.push(
-                new Player(i, 'Name' + i)
-            )
+        for (var i = 1; i < 1; i++) {
+           // this.players.push();
         }
     }
 
     startGame() {
-        // TODO : Appeler les components / services permettant de lancer la partie
-        console.log('Le jeu peut commencer');
-    }
-
-    playerReady() {
         this.everyoneReady = true;
         for (var i = 0, len = this.players.length; i < len; i++) {
             if (this.players[i].ready == false) {
@@ -36,20 +31,19 @@ export class LobbyComponent {
             }
         }
         if (this.everyoneReady && this.players.length > 5) {
-            this.startGame();
+            // TODO : Appeler les components / services permettant de lancer la partie
+            console.log('Le jeu peut commencer');
         }
     }
-}
 
-// TODO : Classe qui sera remplacé par le service User/Player
-class Player {
-    id: number;
-    name: string;
-    ready: boolean;
-
-    constructor(id, name) {
-        this.id = id;
-        this.name = name;
-        this.ready = true;
+    playerReady() {
+        if (this.pseudo.ready) {
+            this.pseudo.ready = false;
+        } else {
+            this.pseudo.ready = true;
+        }
+        this.pseudo.setReady(this.pseudo.ready);
+        this.startGame();
     }
+
 }

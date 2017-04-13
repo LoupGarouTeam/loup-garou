@@ -7,6 +7,7 @@ export class PseudoService {
 
   private url = 'http://localhost:3005';
   private socket :any = io(this.url);
+  public ready = false;
 
   constructor() {
     console.log("Stockage des utilisateurs")
@@ -19,6 +20,17 @@ export class PseudoService {
 
   addPseudo(newPseudo :string){
     localStorage.setItem('user', newPseudo);
+  getReady(){
+    return localStorage.getItem('ready')
+  }
+
+  setReady(ready){
+    localStorage.setItem('ready', ready);
+    this.socket.emit('is-ready', ready);
+  }
+
+  addPseudo(newPseudo){
+    localStorage.setItem('pseudo', newPseudo);
     this.socket.emit('init-pseudo', newPseudo);
   }
 
