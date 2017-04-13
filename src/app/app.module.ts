@@ -10,6 +10,8 @@ import { TchatComponent } from './tchat/tchat.component';
 import { AuthComponent } from './auth/auth.component';
 import {LobbyComponent} from './lobby/lobby.component';
 import { BoardComponent } from './board/board.component';
+import { ListeJoueursComponent } from './liste-joueurs/liste-joueurs.component';
+import { TchatJoueursComponent } from './tchat-joueurs/tchat-joueurs.component';
 
 const appRoutes: Routes = [
   { path: 'login', component: AuthComponent },
@@ -31,6 +33,8 @@ const appRoutes: Routes = [
         AuthComponent,
         LobbyComponent,
         BoardComponent,
+        ListeJoueursComponent,
+        TchatJoueursComponent,
     ],
     imports: [
         BrowserModule,

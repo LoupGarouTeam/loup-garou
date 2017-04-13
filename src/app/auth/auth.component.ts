@@ -22,6 +22,7 @@ export class AuthComponent implements OnInit {
 
     ngOnInit() {
         this.user = this._pseudoService.getPseudo();
+        this.buildForm();
     }
 
     submitPseudo() {
@@ -32,8 +33,8 @@ export class AuthComponent implements OnInit {
     }
 
     onSubmit() {
-        //this.router.navigateByUrl('board');
-        //this.user = this.userForm.value.user;
+
+        this.user = this.userForm.value.user;
         console.log(this.user)
         if (this.user.length >= 4) {
             this.noUser = true;
