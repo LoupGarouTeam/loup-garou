@@ -3,21 +3,56 @@
 		position:fixed;
 		top:50px;
 		left:50px;
-		width:250px;
+		width:200px;
 		height:calc(100vh - 160px);
 		padding-top:60px;
 		background-color: rgba(0,0,0,0.7);
 		overflow-y:auto;
 	}
 			.wrapperGame-interfaceListeJoueursPseudos-section{
+				display:inline-block;
 				width:calc(100% - 48px);
-				min-height:0;
 				border:4px #e2c88e solid;
-				border-radius:3px;
+				border-radius:5px;
 				box-shadow: 0 0 8px rgba(0,0,0,0.7), 0 0 15px #A3805A inset;
-				margin:5px 0 5px 10px;
+				margin:0 0 0 10px;
 				background-color:#DABE93;
-				padding:10px;
-				font-family: 'Lora', 'Arial',serif;
-				font-weight:700;
+				padding:7px 10px;
 			}
+				.wrapperGame-interfaceListeJoueursPseudos-section-etat{
+					width:17px;
+					height:17px;
+					float:left;
+					background-image:url(image/teteMort.jpg);
+					border-radius:3px;
+					box-shadow:0 0 7px #A3805A;
+					margin:0 10px 0 0;
+				}
+				.wrapperGame-interfaceListeJoueursPseudos-section-pseudo{
+					font-family: 'Lora', 'Arial',serif;
+					font-weight:700;
+					float:left;
+					height:100%;
+					overflow:hidden;
+					font-size:1em;
+				}
+			.wrapperGame-interfaceListeJoueursPseudos-section--dead{
+				opacity: .7;
+				display:inline-block;
+				width:calc(100% - 48px);
+				border:4px #7e2100 solid;
+				border-radius:5px;
+				box-shadow: 0 0 8px rgba(0,0,0,0.7), 0 0 15px rgba(0,0,0,0.3) inset;
+				margin:0 0 0 10px;
+				background-color:#7e2100;
+				padding:7px 10px;
+			}
+				.wrapperGame-interfaceListeJoueursPseudos-section-pseudo--dead{
+					font-family: 'Lora', 'Arial',serif;
+					font-weight:700;
+					float:left;
+					height:100%;
+					overflow:hidden;
+					font-size:1em;
+					color:#fff;
+				}
