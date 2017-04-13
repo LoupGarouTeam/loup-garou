@@ -5,7 +5,7 @@ var io = require('socket.io')(http);
 var PORT = process.env.PORT || 3005;
 
 
-var players[];
+var players = new Array();
 
 app.use(express.static(__dirname));
 let Players = []
@@ -25,7 +25,7 @@ io.on('connection', (socket) => {
   });
 
   socket.on('add-player', (playerName) => {
-    players.push({"name" : playerName, "role" = "undefined", ""});
+    players.push({"name" : playerName, "role" : "undefined", "status" : 0});
     socket.emit('players',players);
   });
 
