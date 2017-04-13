@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {PseudoService} from '../pseudo.service';
 import {FormGroup, FormBuilder, Validators} from '@angular/forms';
 import {forbiddenNameValidator} from './forbidden-name.directive';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-auth',
@@ -10,57 +11,58 @@ import {forbiddenNameValidator} from './forbidden-name.directive';
 })
 export class AuthComponent implements OnInit {
 
-    pseudo: string;
-    noPseudo: boolean;
-    pseudoForm: FormGroup;
+    user: string;
+    noUser: boolean;
+    userForm: FormGroup;
     forbiddenRegex = new RegExp('patrick','i');
     active = true;
 
-    constructor(private _pseudoService: PseudoService, private fb: FormBuilder) {
+    constructor(private _pseudoService: PseudoService, private fb: FormBuilder, private router: Router) {
     }
 
     ngOnInit() {
-        this.pseudo = this._pseudoService.getPseudo();
-        this.buildForm();
+        this.user = this._pseudoService.getPseudo();
     }
 
     submitPseudo() {
-        this._pseudoService.addPseudo(this.pseudo);
+        this.router.navigateByUrl('board');
+        console.log(this.user);
+                
+        this._pseudoService.addPseudo(this.user);
+        this.buildForm();
     }
 
     onSubmit() {
-        this.buildForm();
-        this.pseudo = this.pseudoForm.value.pseudo;
-
-        if (this.pseudo.length > 4) {
-            this.noPseudo = true;
+        this.user = this.userForm.value.pseudo;
+        console.log(this.user)
+        if (this.user.length >= 4) {
+            this.noUser = true;
         } else {
-            this.noPseudo = false;
+            this.noUser = false;
         }
-        console.log(this.pseudo);
         this.submitPseudo();
     }
 
     buildForm(): void {
-        this.pseudoForm = this.fb.group({
-            'pseudo': [this.pseudo, [
+        this.userForm = this.fb.group({
+            'pseudo': [this.user, [
                 Validators.required,
                 Validators.minLength(4),
                 Validators.maxLength(16),
                 forbiddenNameValidator(this.forbiddenRegex)]
             ]
         });
-        this.pseudoForm.valueChanges
+        this.userForm.valueChanges
             .subscribe(data => this.onValueChanged(data));
         this.onValueChanged();
     }
 
 
     onValueChanged(data?: any) {
-        if (!this.pseudoForm) {
+        if (!this.userForm) {
             return;
         }
-        const form = this.pseudoForm;
+        const form = this.userForm;
 
         for (const field in this.formErrors) {
             this.formErrors[field] = '';
