@@ -1,4 +1,7 @@
-<div  class='wrapperGame-interfaceListeJoueursPseudos'>
-		<div *ngFor="let listUsers of listUser" class='wrapperGame-interfaceListeJoueursPseudos-section'>{{ listUsers }}</div>
-	
+<div class='wrapperGame-interfaceListeJoueursPseudos'>
+    <div *ngFor="let user of listUser" class='wrapperGame-interfaceListeJoueursPseudos-section'>
+        {{ user }}
+        <input type="checkbox" onclick="return false;"/> <!-- [(ngModel)]="user.ready" onclick="playerReady()";// TODO : Gestion du ready -->
+    </div>
+    <button type="button" class="wrapperGame-interfaceListeJoueursPseudos-start" (click)="startGame()">Start</button>
 </div>

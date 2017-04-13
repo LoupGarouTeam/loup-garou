@@ -8,7 +8,6 @@ import { RoleComponent } from './role/role.component';
 import { TimerComponent } from './timer/timer.component';
 import { TchatComponent } from './tchat/tchat.component';
 import { AuthComponent } from './auth/auth.component';
-import {LobbyComponent} from './lobby/lobby.component';
 import { BoardComponent } from './board/board.component';
 import { ListeJoueursComponent } from './liste-joueurs/liste-joueurs.component';
 import { TchatJoueursComponent } from './tchat-joueurs/tchat-joueurs.component';
@@ -23,7 +22,6 @@ const appRoutes: Routes = [
 
 ];
 
-
 @NgModule({
     declarations: [
         AppComponent,
@@ -31,7 +29,6 @@ const appRoutes: Routes = [
         TimerComponent,
         TchatComponent,
         AuthComponent,
-        LobbyComponent,
         BoardComponent,
         ListeJoueursComponent,
         TchatJoueursComponent,

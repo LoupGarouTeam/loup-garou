@@ -20,4 +20,19 @@
 				padding:10px;
 				font-family: 'Lora', 'Arial',serif;
 				font-weight:700;
+				text-align:center;
+			}
+			.wrapperGame-interfaceListeJoueursPseudos-start{
+				width:calc(100% - 20px);
+				min-height:0;
+				border:4px #e2c88e solid;
+				border-radius:3px;
+				box-shadow: 0 0 8px rgba(0,0,0,0.7), 0 0 15px #A3805A inset;
+				margin:5px 0 5px 10px;
+				background-color:#DABE93;
+				padding:10px;
+				font-family: 'Lora', 'Arial',serif;
+				font-weight:700;
+				margin-top: 20px;
+				font-size:1.2em;
 			}

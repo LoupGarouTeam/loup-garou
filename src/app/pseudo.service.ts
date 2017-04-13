@@ -23,11 +23,7 @@ export class PseudoService {
     this.socket.emit('init-pseudo', newPseudo);
   }
 
-  /*setReady(ready){
-    localStorage.setItem('ready', ready);
-    this.socket.emit('is-ready', ready);
-  }
-
+  /*
   addPseudo(newPseudo){
     localStorage.setItem('pseudo', newPseudo);
     this.socket.emit('init-pseudo', newPseudo);
