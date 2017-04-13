@@ -42,7 +42,7 @@ export class LobbyComponent {
         } else {
             this.pseudo.ready = true;
         }
-        this.pseudo.setReady(this.pseudo.ready);
+        //this.pseudo.setReady(this.pseudo.ready);
         this.startGame();
     }
 
