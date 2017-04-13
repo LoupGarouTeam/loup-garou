@@ -8,7 +8,7 @@ import {PseudoService} from '../pseudo.service';
 })
 export class LobbyComponent {
     pseudo = this._pseudoService;
-    players = []; // TODO regroupe tout les players en un tableau
+    players:any = []; // TODO regroupe tout les players en un tableau
     everyoneReady = true;
 
     constructor(private _pseudoService: PseudoService) {
@@ -42,7 +42,7 @@ export class LobbyComponent {
         } else {
             this.pseudo.ready = true;
         }
-        this.pseudo.setReady(this.pseudo.ready);
+        //this.pseudo.setReady(this.pseudo.ready);
         this.startGame();
     }
 

@@ -25,15 +25,15 @@ export class AuthComponent implements OnInit {
     }
 
     submitPseudo() {
-        this.router.navigateByUrl('board');
+        
         console.log(this.user);
                 
         this._pseudoService.addPseudo(this.user);
-        this.buildForm();
     }
 
     onSubmit() {
-        this.user = this.userForm.value.pseudo;
+        //this.router.navigateByUrl('board');
+        //this.user = this.userForm.value.user;
         console.log(this.user)
         if (this.user.length >= 4) {
             this.noUser = true;
@@ -45,7 +45,7 @@ export class AuthComponent implements OnInit {
 
     buildForm(): void {
         this.userForm = this.fb.group({
-            'pseudo': [this.user, [
+            'user': [this.user, [
                 Validators.required,
                 Validators.minLength(4),
                 Validators.maxLength(16),
@@ -78,11 +78,11 @@ export class AuthComponent implements OnInit {
     }
 
     formErrors = {
-        'pseudo': ''
+        'user': ''
     };
 
     validationMessages = {
-        'pseudo': {
+        'user': {
             'required': 'Un pseudo est obligatoire.',
             'minlength': 'Le nom doit être composé de 4 caractères minimum.',
             'maxlength': 'Le nom doit être composé de 16 caractères maximum.',
