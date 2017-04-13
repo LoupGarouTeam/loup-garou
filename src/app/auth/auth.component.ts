@@ -22,6 +22,7 @@ export class AuthComponent implements OnInit {
 
     ngOnInit() {
         this.user = this._pseudoService.getPseudo();
+        this.buildForm();
     }
 
     submitPseudo() {
@@ -33,7 +34,7 @@ export class AuthComponent implements OnInit {
     }
 
     onSubmit() {
-        this.user = this.userForm.value.pseudo;
+        this.user = this.userForm.value.user;
         console.log(this.user)
         if (this.user.length >= 4) {
             this.noUser = true;
@@ -45,7 +46,7 @@ export class AuthComponent implements OnInit {
 
     buildForm(): void {
         this.userForm = this.fb.group({
-            'pseudo': [this.user, [
+            'user': [this.user, [
                 Validators.required,
                 Validators.minLength(4),
                 Validators.maxLength(16),
