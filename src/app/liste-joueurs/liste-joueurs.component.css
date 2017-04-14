@@ -4,18 +4,22 @@
 		top:50px;
 		left:50px;
 		width:200px;
-		height:calc(100vh - 160px);
-		padding-top:60px;
-		background-color: rgba(0,0,0,0.7);
-		overflow-y:auto;
+		height:calc(100vh - 100px);
+		background-color: #673927;
 	}
+		.wrapperGame-interfaceListeJoueursPseudos-sectionPseudo{
+			width:100%;
+			height:calc(100% - 126px);
+			overflow-y:auto;
+			background-image:url(image/blocFond.jpg);
+			background-position: center top;
+		}
 			.wrapperGame-interfaceListeJoueursPseudos-section{
 				display:inline-block;
-				width:calc(100% - 48px);
+				width:calc(100% - 28px);
 				border:4px #e2c88e solid;
-				border-radius:5px;
-				box-shadow: 0 0 8px rgba(0,0,0,0.7), 0 0 15px #A3805A inset;
-				margin:0 0 0 10px;
+				box-shadow:0 0 15px #A3805A inset;
+				margin:0;
 				background-color:#DABE93;
 				padding:7px 10px;
 			}
@@ -39,12 +43,11 @@
 			.wrapperGame-interfaceListeJoueursPseudos-section--dead{
 				opacity: .7;
 				display:inline-block;
-				width:calc(100% - 48px);
+				width:calc(100% - 28px);
 				border:4px #7e2100 solid;
-				border-radius:5px;
 				box-shadow: 0 0 8px rgba(0,0,0,0.7), 0 0 15px rgba(0,0,0,0.3) inset;
-				margin:0 0 0 10px;
 				background-color:#7e2100;
+				margin:0;
 				padding:7px 10px;
 			}
 				.wrapperGame-interfaceListeJoueursPseudos-section-pseudo--dead{
@@ -56,3 +59,19 @@
 					font-size:1em;
 					color:#fff;
 				}
+		.wrapperGame-interfaceListeJoueursPseudos-blocBas{
+			width:200px;
+			height:63px;
+			background-repeat: no-repeat;
+			background-image:url(image/bloc.jpg);
+			background-size:cover;
+			background-position: center;
+		}
+		.wrapperGame-interfaceListeJoueursPseudos-blocHaut{
+			width:200px;
+			height:63px;
+			background-repeat: no-repeat;
+			background-image:url(image/bloc2.jpg);
+			background-size:cover;
+			background-position: center;
+		}
