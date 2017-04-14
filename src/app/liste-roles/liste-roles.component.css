@@ -41,9 +41,31 @@
 				padding:6px;
 				border-radius:5px;
 				float:left;
+				box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+				background-repeat: no-repeat;
+				background-size:cover;
+				background-position: center;
+			}
+			.role-profil-visuel--sorciere{
+				background-image:url(image/blocProfilSorciere.jpg);
+			}
+			.role-profil-visuel--villageois{
+				background-image:url(image/blocProfilVillageois.jpg);
+			}
+			.role-profil-visuel--loup{
+				background-image:url(image/blocProfilLoup.jpg);
+			}
+			.role-profil-visuel--voyante{
+				background-image:url(image/blocProfilVoyante.jpg);
 			}
 			.wrapperGame-interfaceListeJoueursRoles-Role-bloc-texte{
+				font-family: 'Lora', 'Arial',serif;
 				float:left;
+				line-height: 50px;
+				margin-left:15px;
+				color:#fff;
+				text-shadow: 0 0 15px yellow;
 			}
 	.wrapperGame-interfaceListeJoueursRoles-blocBas{
 		width:200px;
