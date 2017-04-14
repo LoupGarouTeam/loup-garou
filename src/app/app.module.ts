@@ -12,6 +12,7 @@ import {LobbyComponent} from './lobby/lobby.component';
 import { BoardComponent } from './board/board.component';
 import { ListeJoueursComponent } from './liste-joueurs/liste-joueurs.component';
 import { TchatJoueursComponent } from './tchat-joueurs/tchat-joueurs.component';
+import { ListeRolesComponent } from './liste-roles/liste-roles.component';
 
 const appRoutes: Routes = [
   { path: 'login', component: AuthComponent },
@@ -35,6 +36,7 @@ const appRoutes: Routes = [
         BoardComponent,
         ListeJoueursComponent,
         TchatJoueursComponent,
+        ListeRolesComponent,
     ],
     imports: [
         BrowserModule,
