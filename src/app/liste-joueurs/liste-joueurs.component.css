@@ -8,11 +8,13 @@
 		background-color: #673927;
 	}
 		.wrapperGame-interfaceListeJoueursPseudos-sectionPseudo{
-			width:100%;
-			height:calc(100% - 126px);
+			width:calc(100% - 12px);
+			height:calc(100% - 138px);
 			overflow-y:auto;
 			background-image:url(image/blocFond.jpg);
 			background-position: center top;
+			border:6px transparent solid;
+			box-shadow:0 0 20px rgba(0,0,0,0.7) inset;
 		}
 			.wrapperGame-interfaceListeJoueursPseudos-section{
 				display:inline-block;
