@@ -14,9 +14,6 @@ export class TimerComponent implements OnInit {
   constructor(private _boardService: BoardService) { }
 
   ngOnInit() {
-    // setTimeout(function(){
-    //    this.varTimer = this._boardService.getTimer(this.varTimer);
-    // }.bind(this),1000);
 
     this._boardService.initTimer();
 

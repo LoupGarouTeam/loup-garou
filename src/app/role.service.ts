@@ -49,7 +49,7 @@ export class RoleService {
 
     roles["v"] = nbrPlayers - nbrRolesDistribues;
     let rolesDistribues = roles;
-
+    
     players = this.shuffle(players);
 
     for (var i = 0; i<players.length; i++)

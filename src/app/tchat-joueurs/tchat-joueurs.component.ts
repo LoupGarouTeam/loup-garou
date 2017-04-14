@@ -9,6 +9,8 @@ import { BoardService } from '../board.service';
 })
 export class TchatJoueursComponent implements OnInit {
 
+  
+
   constructor() { }
 
   ngOnInit() {
