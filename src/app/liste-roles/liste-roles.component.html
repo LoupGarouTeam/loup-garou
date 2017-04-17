@@ -3,11 +3,13 @@
 
 	<div class='wrapperGame-interfaceListeJoueursRoles-Role'>
 		
-		<div class='wrapperGame-interfaceListeJoueursRoles-Role-bloc'>
-			<div class='wrapperGame-interfaceListeJoueursRoles-Role-bloc-profil role-profil-visuel--sorciere'></div>
-			<span class='wrapperGame-interfaceListeJoueursRoles-Role-bloc-texte'>
-				Sorcière
-			</span>
+		<div *ngFor="let listUsers of listUser" class='wrapperGame-interfaceListeJoueursRoles-Role-bloc'>
+			<div *ngIf="listUsers.role as so">
+				<div class='wrapperGame-interfaceListeJoueursRoles-Role-bloc-profil role-profil-visuel--sorciere'></div>
+				<span class='wrapperGame-interfaceListeJoueursRoles-Role-bloc-texte'>
+					Sorcière
+				</span>
+			</div>
 		</div>
 
 		<div class='wrapperGame-interfaceListeJoueursRoles-Role-bloc'>

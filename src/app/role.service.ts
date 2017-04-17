@@ -8,11 +8,7 @@ export class RoleService {
 
   constructor() { }
 
-  attribuerRole(players){
-  /*  let players = [{ "name" : "Raymond", "role" : "undefined", "status" : 0},
-    { "name" : "Franc", "role" : "undefined", "status" : 0}, { "name" : "Alexandre", "role" : "undefined", "status" : 0}
-  , { "name" : "David", "role" : "undefined", "status" : 0}, { "name" : "Lucas", "role" : "undefined", "status" : 0},
-{ "name" : "Denis", "role" : "undefined", "status" : 0}];*/
+  attribuerRole(players :any){
 
     let roles = {"lg" : 0, "v" : 0, "vo" : 1, "ch" : 0, "cu" : 0, "pf" : 0, "so" : 0};
     let nbrPlayers = players.length;
@@ -66,8 +62,8 @@ export class RoleService {
     }
 
     players = this.shuffle(players);
-
-    return players;
+    this.socket.emit('shuffle-players', players);
+    console.log(players);
 
   }
 

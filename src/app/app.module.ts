@@ -17,6 +17,7 @@ const appRoutes: Routes = [
   { path: 'roletest', component: RoleComponent },
   { path: 'board', component: BoardComponent },
   { path: 'timer', component: TimerComponent },
+  { path: 'role', component: RoleComponent },
   { path: '',   redirectTo: '/login', pathMatch: 'full' }
 
 ];

@@ -27,7 +27,7 @@ export class AuthComponent implements OnInit {
 
     submitPseudo() {
         this._pseudoService.addPseudo(this.user);
-        this.router.navigateByUrl('board');
+        this.router.navigateByUrl('role');
     }
 
     onSubmit() {

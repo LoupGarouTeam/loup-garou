@@ -8,30 +8,37 @@ var PORT = process.env.PORT || 3005;
 app.use(express.static(__dirname));
 
 var varTimer = 60;
-var pseudo = [];
+var element = {};
+var user = [];
 
 io.on('connection', (socket) => {
-  console.log('user connected');
 
   socket.on('addPlayer', function(name){
-    Players.push(name);
-  });
-
-  socket.on('add-message', (message) => {
-    io.emit('message', {type:'new-message', text: message});
+    
+   
   });
 
   /* Liste des utilisateurs */
   socket.on('list-user', () => {
-    console.log(pseudo)
-      io.emit('listUser', pseudo)
+      io.emit('listUser', user)
+      console.log(user)
   });
 
   /* Initialisation des user */
   socket.on('init-pseudo', (newPseudo) => {
-    pseudo.push(newPseudo);
-    console.log(pseudo);
+    user.push(new element(newPseudo, undefined, 0))
   });
+
+  socket.on('attribuer-role-player', (players) => {
+    user = players
+    console.log(user)
+  })
+
+  function element(name, role, status) {
+    this.name = name;
+    this.role = role;
+    this.satus = status;
+  }
 
   /* Timer des partis */
   socket.on('init-timer', () => {
@@ -53,7 +60,7 @@ io.on('connection', (socket) => {
           io.emit('updateTimer',varTimer);
         },1000);
    }
-   if (pseudo.length > 1) {
+   if (user.length > 1) {
       loadTimer();
     }
  });
